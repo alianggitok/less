@@ -1,0 +1,49 @@
+@color:red;
+@backgroundColor:yellow;
+
+
+/*变量作用域*/
+#header{
+	@color:blue;
+	background: @backgroundColor;
+	color:@color;
+	h1{
+		color:@color;
+	}
+}
+
+h2{color: @color}
+
+
+/*赋予了默认参数*/
+.colorA(@color:pink,@fontSize:32px){
+	color: @color;
+	font-size: @fontSize;
+}
+
+.a{
+	.colorA;
+}
+
+
+/*可以传递参数*/
+.colorB(@color,@backgroundColor){
+	color: @color;
+	background:@backgroundColor;
+}
+
+.b{
+	.colorB(white;black);
+}
+
+
+/*@arguments变量*/
+.border(@width:2px,@style:solid,@color:red){
+	border:@arguments;
+}
+
+.c{
+	.border(5px);
+}
+
+

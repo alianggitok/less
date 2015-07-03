@@ -1,0 +1,17 @@
+.a{font-size:20px}
+.b{margin-top:20px}
+
+/*命名空间*/
+.namespace{
+	.a{color:red;background:yellow}
+	.b{color:blue;border:1px solid black}
+}
+
+.a{
+	.namespace>.a;
+}
+
+.b{
+	.namespace>.b
+}
+
